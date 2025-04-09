@@ -59,11 +59,15 @@ def deduplicate_comments(df, is_hunter=False):
 
     # Create a unified scrape date
     df['scrape_date'] = df.apply(
+        # evtl row['reply_id'])
         lambda row: row['reply_scrape_date'] if pd.notna(row.get('reply_id')) else row['comment_scrape_date'],
         axis=1
     )
 
     df['scrape_date'] = pd.to_datetime(df['scrape_date'], errors='coerce')
+
+    # Sorts the dataset in the right order, such that the latest scraped comments will be chosen
+    df.sort_values(by='scrape_date', ascending=False, inplace=True)
 
     # Split into replies and comments
     is_reply = pd.notna(df['reply_id'])
@@ -82,6 +86,7 @@ def export_to_csv(df, output_name):
 
 def main():
     source = "/Users/nathalieguibert/Desktop/ResAss_Klüser_FS25/Ambizione Nathalie/Sexually Explicit Deepfakes/"
+    # Data: angelaraynermp, carahuntermla
     data_file = "Posts_angelaraynermp.json"  # change this to data_hunter_mla if needed
     file_path = os.path.join(source, data_file)
 
