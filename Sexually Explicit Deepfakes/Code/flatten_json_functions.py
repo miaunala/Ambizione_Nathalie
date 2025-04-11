@@ -87,7 +87,7 @@ def export_to_csv(df, output_name):
 def main():
     source = "/Users/nathalieguibert/Desktop/ResAss_Klüser_FS25/Ambizione Nathalie/Sexually Explicit Deepfakes/"
     # Data: angelaraynermp, carahuntermla
-    data_file = "Posts_angelaraynermp.json"  # change this to data_hunter_mla if needed
+    data_file = "Posts_carahuntermla.json"  # change this to Posts_angelaraynermp.json if needed
     file_path = os.path.join(source, data_file)
 
     is_hunter = data_file == "Posts_carahuntermla.json"
@@ -95,6 +95,8 @@ def main():
     data = load_json_file(file_path)
     df_comments = flatten_comments(data)
     df_comments = deduplicate_comments(df_comments, is_hunter=is_hunter)
+    # Drop rows where neither comment_text nor reply_text exists
+    df_comments = df_comments[~(df_comments['comment_text'].isna() & df_comments['reply_text'].isna())]
 
     print(df_comments.head())
     print(df_comments.shape)
