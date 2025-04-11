@@ -6,4 +6,14 @@ Influencers and Pro-Social Behavior/account_clusters.csv
 Influencers and Pro-Social Behavior/ct_combined_20-23.csv
 Sexually Explicit Deepfakes/Posts_angelaraynermp.json
 Sexually Explicit Deepfakes/Posts_carahuntermla.json
-Sexually Explicit Deepfakes/Code/flattened_comments_*.csv
+#maybe add them again if they are too large
+#Sexually Explicit Deepfakes/Code/flattened_comments_*.csv
+.DS_Store
+.idea/
+__pycache__/
+*.py[cod]
+*.ckpt
+.ipynb_checkpoints/
+.venv/
+.env/
+*.Rhistory
