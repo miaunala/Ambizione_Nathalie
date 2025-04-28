@@ -87,7 +87,7 @@ def export_to_csv(df, output_name):
 def main():
     source = "/Users/nathalieguibert/Desktop/ResAss_Klüser_FS25/Ambizione Nathalie/Sexually Explicit Deepfakes/"
     # Data: angelaraynermp, carahuntermla
-    data_file = "Posts_carahuntermla.json"  # change this to Posts_angelaraynermp.json if needed
+    data_file = "Posts_donorpool.json" #"Posts_carahuntermla.json"  # change this to Posts_angelaraynermp.json if needed
     file_path = os.path.join(source, data_file)
 
     is_hunter = data_file == "Posts_carahuntermla.json"
