@@ -4,6 +4,9 @@ Influencers and Fake News/account_clusters.csv
 Influencers and Fake News/true_false_misleading_claims.xlsx
 Influencers and Pro-Social Behavior/account_clusters.csv
 Influencers and Pro-Social Behavior/ct_combined_20-23.csv
+# Ignore large data files in Claim_Matching_UZH
+Influencers and Fake News/Claim_Matching_UZH/data/*.csv
+Influencers and Fake News/Claim_Matching_UZH/data/*.xlsx
 Sexually Explicit Deepfakes/Posts_angelaraynermp.json
 Sexually Explicit Deepfakes/Posts_carahuntermla.json
 #maybe add them again if they are too large
