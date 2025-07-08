@@ -31,10 +31,14 @@ claims_df = claims_df[claims_df["verdict"].isin(["false", "mostly-false"])]
 # oder variable false  == TRUE
 # check type beforehand
 # check whether alls false and mostly-false are in category false == True
-claims_df = claims_df[claims_df["false"] == "True"]
+print(claims_df["false"])
+
+print(type(claims_df["false"]))
+print("que")
+claims_df = claims_df[claims_df["false"] == True]
 
 claims_df = claims_df[["verdict", "statement_originator", "statement", "statement_date", "factcheck_date"]] # vielelicht wegmachen und erst später nach analyse
-claims_df.to_csv("analysis_claims_df.csv", index=False)
+claims_df.to_csv(f"{base_path}analysis_claims_df.csv", index=False)
 
 # only keep english posts
 posts_df = posts_df[posts_df["lang"] == "en"]
@@ -45,5 +49,5 @@ posts_df["description"] = posts_df["description"].fillna("")
 posts_df["media_text"] = posts_df["media_text"].fillna("")
 posts_df["text_analysis"] = posts_df["description"] + " " + posts_df["media_text"]
 
-posts_df.to_csv("analysis_posts_df.csv", index=False)
+posts_df.to_csv(f"{base_path}analysis_posts_df.csv", index=False)
 print("joa ")
