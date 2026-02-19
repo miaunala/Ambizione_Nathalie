@@ -1,0 +1,10 @@
+subset_index,record_id,workspace,dataset
+0,9d18156d-e47d-49e8-88f7-f83af0803bf4,prolific_001,subset_001
+1,9d18156d-e47d-49e8-88f7-f83af0803bf4,prolific_002,subset_002
+2,9d18156d-e47d-49e8-88f7-f83af0803bf4,prolific_003,subset_003
+0,c377688f-89e9-4a5f-af17-e0ea08a1d578,prolific_001,subset_001
+1,c377688f-89e9-4a5f-af17-e0ea08a1d578,prolific_002,subset_002
+2,c377688f-89e9-4a5f-af17-e0ea08a1d578,prolific_003,subset_003
+0,ec309f9e-e415-4bb5-8468-2fb1a94ed12c,prolific_001,subset_001
+1,ec309f9e-e415-4bb5-8468-2fb1a94ed12c,prolific_002,subset_002
+2,ec309f9e-e415-4bb5-8468-2fb1a94ed12c,prolific_003,subset_003
